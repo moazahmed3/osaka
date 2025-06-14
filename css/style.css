@@ -112,3 +112,109 @@ body {
 .modal-dialog button {
   background: none;
 }
+
+/* ======================================إصلاح مشكلة التمرير الأفقي================================ */
+/* منع التمرير الأفقي على مستوى الصفحة */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* إصلاح مشكلة container في الشاشات الصغيرة */
+@media (max-width: 576px) {
+  .container {
+    max-width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* إصلاح navbar للشاشات الصغيرة */
+.navbar {
+  overflow-x: hidden;
+}
+
+@media (max-width: 576px) {
+  .navbar .container {
+    max-width: 100% !important;
+  }
+  
+  .navbar-nav {
+    max-width: 100%;
+  }
+}
+
+/* إصلاح النصوص الطويلة */
+p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* إصلاح الصور */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* إصلاح العناصر العامة */
+* {
+  box-sizing: border-box;
+}
+
+/* إصلاح خاص لقسم hero */
+#hero .inner-hero {
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+/* إصلاح أيقونات التواصل الاجتماعي */
+#hero .media ul {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+/* إصلاح carousel indicators */
+@media (max-width: 576px) {
+  #testimonial .carousel-indicators {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* إصلاح portfolio tabs */
+@media (max-width: 576px) {
+  #portfolio .nav-pills {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #portfolio .nav-item {
+    margin-bottom: 5px;
+  }
+}
+
+/* إصلاح عام للعناصر التي تتجاوز العرض */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col-md-6, .col-lg-4, .col-md-4, .col-md-7, .col-md-10 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* إصلاح خاص للشاشات الصغيرة جداً */
+@media (max-width: 375px) {
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .header p {
+    font-size: 2.5rem !important;
+    letter-spacing: 5px !important;
+  }
+}
+
